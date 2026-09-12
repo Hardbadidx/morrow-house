@@ -1,0 +1,158 @@
+import diningRoomImg from '../assets/spaces/dining-room.png';
+import coffeeBarImg from '../assets/spaces/coffee-bar.png';
+import privateDiningImg from '../assets/spaces/private-dining.png';
+import tableReservedImg from '../assets/spaces/table-reserved.png';
+import pizzaBurrataImg from '../assets/food/pizza-burrata.png';
+import categoryPastaImg from '../assets/food/category-pasta.png';
+import categoryCoffeeImg from '../assets/food/category-coffee.png';
+import dessertTiramisuImg from '../assets/food/dessert-tiramisu.png';
+
+export const SPACES_DATA = [
+  {
+    id: 'dining-room',
+    number: '01',
+    title: 'The Dining Room',
+    subtitle: 'Relaxed, elegant, and inviting.',
+    tag: 'Main Hall',
+    atmosphere: 'Warm acoustic calm under natural daylight archways and amber pendant glow.',
+    idealOccasion: 'Evening celebrations, relaxed date nights & leisurely shared dinners',
+    signatureDetail: 'Curved velvet banquettes & acoustic architectural design',
+    description: 'Surrounded by lush indoor palms, curved velvet banquettes, and hand-plastered almond walls, our dining room balances social warmth with acoustic comfort. Designed for lingering over shared plates and thoughtful dialogue.',
+    capacity: 'Up to 80 guests',
+    features: ['Curved Velvet Banquettes', 'Acoustic Architectural Design', 'Warm Pendant Glow', 'Natural Light Archways'],
+    image: diningRoomImg,
+  },
+  {
+    id: 'coffee-bar',
+    number: '02',
+    title: 'The Coffee Bar',
+    subtitle: 'Where ideas and espresso flow.',
+    tag: 'Artisanal Bar',
+    atmosphere: 'Vibrant morning rituals, rhythmic espresso extraction, and high communal perch.',
+    idealOccasion: 'Morning coffee rituals, focused solo sessions & casual conversations',
+    signatureDetail: 'Monolithic honed black stone bar & brushed brass Synesso stations',
+    description: 'A monolithic honed black stone bar crowned with custom brushed brass extraction stations. Watch our baristas dial in single-origin beans and pour intricate microfoam rosettes under radiant morning skylight.',
+    capacity: '24 bar seats & communal perch',
+    features: ['Custom Synesso Espresso Stations', 'Single Origin Cupping Area', 'Barista Counter Dialogue', 'Morning Pastry Display'],
+    image: coffeeBarImg,
+  },
+  {
+    id: 'private-dining',
+    number: '03',
+    title: 'Private Dining',
+    subtitle: 'For your most special moments.',
+    tag: 'Exclusive Salon',
+    atmosphere: 'Secluded timber-lined intimacy with custom sommelier wine pairings.',
+    idealOccasion: 'Private family banquets, corporate milestones & exclusive tastings',
+    signatureDetail: 'Curated wine vault showcase & bespoke degustation service',
+    description: 'An intimate timber-lined sanctuary overlooking our temperature-controlled glass wine cellar. Equipped with dedicated sommelier service and customized tasting menus tailored to your milestone celebration.',
+    capacity: 'Seats 8 to 16 guests',
+    features: ['Private Sommelier Service', 'Bespoke Degustation Menus', 'Curated Wine Vault View', 'Dedicated Audio Zone'],
+    image: privateDiningImg,
+  },
+  {
+    id: 'chefs-counter',
+    number: '04',
+    title: "Chef's Counter",
+    subtitle: 'Front-row culinary mastery.',
+    tag: 'Kitchen Theatre',
+    atmosphere: 'Immersive culinary dialogue directly facing the 450°C stone oven hearth.',
+    idealOccasion: 'Culinary enthusiasts, intimate anniversary dining & chef tastings',
+    signatureDetail: 'Live hearthside plating & personal dish presentation by chefs',
+    description: 'Directly flanking our wood-fired stone oven and pasta preparation station. Savor every course hot off the fire as our chefs explain the sourdough fermentation, olive oil origins, and culinary techniques.',
+    capacity: '10 exclusive front-row stools',
+    features: ['Wood-Fired Hearth View', 'Live Sourdough & Pasta Rolling', 'Chef-Presented Courses', 'Direct Plating Experience'],
+    image: tableReservedImg,
+  },
+];
+
+export const EXPERIENCE_GALLERY = [
+  {
+    id: 'moment-1',
+    title: 'Curved Velvet Banquettes',
+    spaceId: 'dining-room',
+    spaceName: 'The Dining Room',
+    category: 'Architecture',
+    image: diningRoomImg,
+    caption: 'Acoustic architectural contours designed for leisurely conversation and warm evening light.',
+    aspectRatio: 'wide',
+  },
+  {
+    id: 'moment-2',
+    title: 'Honed Black Stone Extraction',
+    spaceId: 'coffee-bar',
+    spaceName: 'The Coffee Bar',
+    category: 'Ritual',
+    image: coffeeBarImg,
+    caption: 'Monolithic black stone bar featuring custom brushed brass Synesso extraction stations.',
+    aspectRatio: 'standard',
+  },
+  {
+    id: 'moment-3',
+    title: 'Wood-Fired Hearth Plating',
+    spaceId: 'chefs-counter',
+    spaceName: "Chef's Counter",
+    category: 'Craft',
+    image: pizzaBurrataImg,
+    caption: '48-hour fermented sourdough charred at 450°C and finished with chilled Pugliese burrata.',
+    aspectRatio: 'standard',
+  },
+  {
+    id: 'moment-4',
+    title: 'Timber-Lined Wine Vault Salon',
+    spaceId: 'private-dining',
+    spaceName: 'Private Dining',
+    category: 'Intimacy',
+    image: privateDiningImg,
+    caption: 'Enclosed timber sanctuary with bespoke degustation service and temperature-controlled cellar view.',
+    aspectRatio: 'wide',
+  },
+  {
+    id: 'moment-5',
+    title: 'Front-Row Hearth Mastery',
+    spaceId: 'chefs-counter',
+    spaceName: "Chef's Counter",
+    category: 'Theatre',
+    image: tableReservedImg,
+    caption: 'Ten exclusive front-row stools overlooking direct flame finishing and pasta rolling.',
+    aspectRatio: 'standard',
+  },
+  {
+    id: 'moment-6',
+    title: 'Bronze-Die Pasta Extrusion',
+    spaceId: 'dining-room',
+    spaceName: 'The Dining Room',
+    category: 'Culinary',
+    image: categoryPastaImg,
+    caption: 'Handcrafted bronze-extruded egg semolina ribbons coated in slow-simmered emulsions.',
+    aspectRatio: 'standard',
+  },
+  {
+    id: 'moment-7',
+    title: 'Single-Origin Dial-In',
+    spaceId: 'coffee-bar',
+    spaceName: 'The Coffee Bar',
+    category: 'Roastery',
+    image: categoryCoffeeImg,
+    caption: 'Micro-lot Ethiopian and Colombian beans dialed in daily for floral aromatics and balanced acidity.',
+    aspectRatio: 'standard',
+  },
+  {
+    id: 'moment-8',
+    title: 'Valrhona Cocoa Finale',
+    spaceId: 'private-dining',
+    spaceName: 'Private Dining',
+    category: 'Pastry',
+    image: dessertTiramisuImg,
+    caption: 'Espresso-soaked savoiardi layered with whipped mascarpone crema and 70% dark cocoa dust.',
+    aspectRatio: 'standard',
+  },
+];
+
+// Backward-compatible export for any legacy references
+export const AMBIANCE_ZONES = [
+  { id: 'dining-room', name: 'The Dining Room', tagline: 'Acoustic calm and curved banquettes.' },
+  { id: 'coffee-bar', name: 'The Coffee Bar', tagline: 'Artisanal espresso and morning light.' },
+  { id: 'private-dining', name: 'Private Dining', tagline: 'Timber-lined exclusive salon.' },
+  { id: 'chefs-counter', name: "Chef's Counter", tagline: 'Front-row hearth mastery.' },
+];

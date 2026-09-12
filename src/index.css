@@ -1,0 +1,234 @@
+@import "@fontsource/peace-sans/400.css";
+@import "@fontsource/open-sauce-sans/300.css";
+@import "@fontsource/open-sauce-sans/400.css";
+@import "@fontsource/open-sauce-sans/500.css";
+@import "@fontsource/open-sauce-sans/600.css";
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Peace Sans", "Plus Jakarta Sans", sans-serif;
+  --font-ui: "Plus Jakarta Sans", "Open Sauce Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  /* Official Morrow House Palette */
+  --color-almond: #D6BD98;
+  --color-almond-light: #E7D7C1;
+  --color-almond-dark: #C4A77D;
+  --color-matcha: #677D6A;
+  --color-matcha-light: #7E9782;
+  --color-forest: #40534C;
+  --color-forest-dark: #2F3E39;
+  --color-eclipse: #1A3636;
+  --color-eclipse-dark: #122424;
+  --color-cream: #FBF8F3;
+  --color-cream-card: #F5EFEB;
+}
+
+:root {
+  --color-almond: #D6BD98;
+  --color-matcha: #677D6A;
+  --color-forest: #40534C;
+  --color-eclipse: #1A3636;
+  --color-cream: #FBF8F3;
+
+  --font-display: "Peace Sans", "Plus Jakarta Sans", sans-serif;
+  --font-ui: "Plus Jakarta Sans", "Open Sauce Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  /* High-impact, disciplined responsive typography scale */
+  --fs-hero: clamp(2.75rem, 5.8vw, 5.5rem);
+  --fs-h2: clamp(2rem, 3.8vw, 3.5rem);
+  --fs-h3: clamp(1.35rem, 2.2vw, 1.85rem);
+  --fs-body: clamp(0.95rem, 0.25vw + 0.9rem, 1.1rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #D6BD98;
+  color: #1A3636;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-ui);
+  background-color: #D6BD98;
+  color: #1A3636;
+  overflow-x: hidden;
+}
+
+/* Typography Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  font-weight: 400;
+}
+
+.sub-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* Button & Interaction Micro-States (Emil Kowalski Philosophy) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1A3636;
+  color: #D6BD98;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #122424;
+  box-shadow: 0 10px 24px -6px rgba(26, 54, 54, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(251, 248, 243, 0.65);
+  backdrop-filter: blur(8px);
+  color: #1A3636;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  border: 1px solid rgba(26, 54, 54, 0.15);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease, border-color 200ms ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background-color: rgba(251, 248, 243, 0.95);
+  border-color: rgba(26, 54, 54, 0.3);
+}
+
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Organic Wave Shape Dividers */
+.wave-divider-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Card Depth & Floating Object Hovers */
+.card-hover {
+  transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px -8px rgba(26, 54, 54, 0.18);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D6BD98;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #40534C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1A3636;
+}
+
+/* Category Rail Thinner Horizontal Scrollbar (Target 3-4px) */
+.menu-category-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(26, 54, 54, 0.35) rgba(26, 54, 54, 0.08);
+}
+
+.menu-category-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.menu-category-scrollbar::-webkit-scrollbar-track {
+  background: rgba(26, 54, 54, 0.08);
+  border-radius: 9999px;
+}
+
+.menu-category-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(26, 54, 54, 0.35);
+  border-radius: 9999px;
+}
+
+.menu-category-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1A3636;
+}
+
+/* Subtle Hairlines */
+.hairline-dark {
+  border-bottom: 1px solid rgba(26, 54, 54, 0.12);
+}
+
+.hairline-light {
+  border-bottom: 1px solid rgba(214, 189, 152, 0.15);
+}
